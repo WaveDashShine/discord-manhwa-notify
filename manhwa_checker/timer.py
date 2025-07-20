@@ -13,6 +13,8 @@ def get_timedelta_from_str(time_string: str) -> timedelta:
         return timedelta(weeks=number)
     if "month" in time_string.lower():
         return timedelta(weeks=number * 4)
+    if "year" in time_string.lower():
+        return timedelta(weeks=number * 52)
     raise NotImplementedError(f"No conversion from {time_string} to timedelta")
 
 
